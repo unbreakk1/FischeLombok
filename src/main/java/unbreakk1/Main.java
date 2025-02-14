@@ -89,6 +89,7 @@ public class Main
          List<Student> initialStudents = new ArrayList<>();
          initialStudents.add(student4);
          initialStudents.add(student5);
+
          Course course2 = Course.builder()
                 .id(102)
                 .name("Introduction to Programming")
@@ -105,7 +106,7 @@ public class Main
          Course updatedCourse2 = Course.builder()
                 .id(course.getId())
                 .name(course.getName())
-                .teacher(course.getTeacher())
+                .teacher(teacher2)
                 .students(updatedStudents)
                 .build();
 
