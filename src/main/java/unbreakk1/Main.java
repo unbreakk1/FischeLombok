@@ -56,7 +56,6 @@ public class Main
           System.out.println("\nOriginal Course: " + course);
           System.out.println("Updated Course: " + updatedCourse);
 
-
           System.out.println("Course Information:");
           System.out.println("Course ID: " + course.getId());
           System.out.println("Course Name: " + course.getName());
@@ -72,7 +71,9 @@ public class Main
             .name("Jane Smith")
             .address("456 Oak Avenue")
             .grade("B+")
-            .build();Student student6 = Student.builder()
+            .build();
+
+          Student student6 = Student.builder()
             .id(6)
             .name("Alice Brown")
             .address("789 Pine Lane")
