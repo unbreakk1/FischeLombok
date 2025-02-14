@@ -64,7 +64,13 @@ public class Main
               System.out.println("- " + student.getName() + " (" + student.getGrade() + ")");
           }
 
-          Student student4 = Student.builder().id(4).name("John Doe").address("123 Maple Street").grade("A").build();Student student5 = Student.builder()
+          Student student4 = Student.builder()
+                  .id(4).name("John Doe")
+                  .address("123 Maple Street")
+                  .grade("A")
+                  .build();
+
+          Student student5 = Student.builder()
             .id(5)
             .name("Jane Smith")
             .address("456 Oak Avenue")
