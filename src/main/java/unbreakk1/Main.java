@@ -19,7 +19,6 @@ public class Main
           System.out.println("Original Student: " + student1);
           System.out.println("Updated Student: " + updatedStudent1);
 
-
           Student student2 = new Student();
           student2.setId(2);
           student2.setName("Jane Fries");
@@ -38,7 +37,6 @@ public class Main
           Teacher updatedTeacher = teacher.withName("Dr. Mango").withSubject("Tropical Fruits");
           System.out.println("\nOriginal Teacher: " + teacher);
           System.out.println("Updated Teacher: " + updatedTeacher);
-
 
           List<Student> studentList = new ArrayList<>();
           studentList.add(student1);
@@ -112,6 +110,5 @@ public class Main
 
          System.out.println("\nUpdated Course:");
          System.out.println(updatedCourse2);
-
     }
 }
