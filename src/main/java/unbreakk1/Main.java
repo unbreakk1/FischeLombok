@@ -57,7 +57,7 @@ public class Main
           System.out.println("Updated Course: " + updatedCourse);
 
 
-        System.out.println("Course Information:");
+          System.out.println("Course Information:");
           System.out.println("Course ID: " + course.getId());
           System.out.println("Course Name: " + course.getName());
           System.out.println("Teacher: " + course.getTeacher().name());
@@ -67,75 +67,49 @@ public class Main
               System.out.println("- " + student.getName() + " (" + student.getGrade() + ")");
           }
 
-      //  // Create Students using Builder
-      //  Student student1 = Student.builder()
-      //          .id(1)
-      //          .name("John Dough")
-      //          .address("123 Bread Lane")
-      //          .grade("A+")
-      //          .build();
-//
-      //  Student student2 = Student.builder()
-      //          .id(2)
-      //          .name("Jane Fries")
-      //          .address("456 Potato Street")
-      //          .grade("B")
-      //          .build();
-//
-      //  Student student3 = Student.builder()
-      //          .id(3)
-      //          .name("Tom Ato")
-      //          .address("789 Fruit Avenue")
-      //          .grade("A")
-      //          .build();
-//
-      //  // Test Lombok-generated Builder.toString() for Student
-      //  System.out.println("Testing Student Builder:");
-      //  System.out.println(student1);
-      //  System.out.println(student2);
-      //  System.out.println(student3);
-//
-      //  // Create Teacher using Builder
-      //  Teacher teacher = Teacher.builder()
-      //          .id(1)
-      //          .name("Professor Avocado")
-      //          .subject("Advanced Fruit Studies")
-      //          .build();
-//
-      //  // Add Students to a List
-      //  List<Student> studentList = new ArrayList<>();
-      //  studentList.add(student1);
-      //  studentList.add(student2);
-      //  studentList.add(student3);
-//
-      //  // Create Course using Builder
-      //  Course course = Course.builder()
-      //          .id(101)
-      //          .name("Intro to Food Studies")
-      //          .teacher(teacher)
-      //          .students(studentList)
-      //          .build();
-//
-      //  // Test Lombok's generated Course Builder
-      //  System.out.println("\nTesting Course Builder:");
-      //  System.out.println(course);
-//
-      //  // Create a second Teacher and Course with Builder
-      //  Teacher teacher2 = Teacher.builder()
-      //          .id(2)
-      //          .name("Captain Corn")
-      //          .subject("Popcorn Studies")
-      //          .build();
-//
-      //  Course course2 = Course.builder()
-      //          .id(102)
-      //          .name("Popcorn Appreciation 101")
-      //          .teacher(teacher2)
-      //          .students(List.of(student2, student3)) // Adding only a subset of students
-      //          .build();
-//
-      //  System.out.println("\nTesting another Course Builder:");
-      //  System.out.println(course2);
+          Student student4 = Student.builder().id(4).name("John Doe").address("123 Maple Street").grade("A").build();Student student5 = Student.builder()
+            .id(5)
+            .name("Jane Smith")
+            .address("456 Oak Avenue")
+            .grade("B+")
+            .build();Student student6 = Student.builder()
+            .id(6)
+            .name("Alice Brown")
+            .address("789 Pine Lane")
+            .grade("A+")
+            .build();
+
+          Teacher teacher2 = Teacher.builder()
+                .id(2)
+                .name("Dr. Emily Carter")
+                .subject("Computer Science")
+                .build();
+
+         List<Student> initialStudents = new ArrayList<>();
+         initialStudents.add(student4);
+         initialStudents.add(student5);
+         Course course2 = Course.builder()
+                .id(102)
+                .name("Introduction to Programming")
+                .teacher(teacher)
+                .students(initialStudents)
+                .build();
+
+         System.out.println("Initial Course:");
+         System.out.println(course2);
+
+         List<Student> updatedStudents = new ArrayList<>(course.getStudents());
+         updatedStudents.add(student6);
+
+         Course updatedCourse2 = Course.builder()
+                .id(course.getId())
+                .name(course.getName())
+                .teacher(course.getTeacher())
+                .students(updatedStudents)
+                .build();
+
+         System.out.println("\nUpdated Course:");
+         System.out.println(updatedCourse2);
 
     }
 }
