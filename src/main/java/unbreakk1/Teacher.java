@@ -1,10 +1,11 @@
 package unbreakk1;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.With;
 
-@Data
 @Builder
+@With
 public record Teacher(int id, String name, String subject)
 {
 }
